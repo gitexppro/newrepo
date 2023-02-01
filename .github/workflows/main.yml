@@ -1,0 +1,14 @@
+name: CI
+on:
+  push:
+    branches:
+    - main
+
+jobs:
+  build:
+    name: build main code
+    runs-on: ubuntu-18.04
+    
+    steps:
+    - name: run a one-line script
+      run: echo start building the code
