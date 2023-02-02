@@ -1,0 +1,17 @@
+name: Basic Generate Artifact
+on: push
+
+env:
+  ARTIFACT_NAME: myartifact
+jobs:
+  mainJob:
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout the code
+      uses: actions/checkout@v3.3.0
+      with: ${{ github.repository }}
+    - name: Upload artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: ${{env.ARTIFACT_NAME}}
+        path: .
