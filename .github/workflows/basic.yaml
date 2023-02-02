@@ -1,0 +1,27 @@
+name: basic workflow
+on: push
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print date bash
+        run: date
+  job2:
+    runs-on: windows-latest
+    steps:
+      - name: print date powershell
+        run: Get-Date
+
+  job3:
+    runs-on: macos-latest
+    steps:
+      - name: print date bash
+        run: date
+
+  job4:
+    runs-on: ubuntu-20.04
+    needs: [job1, job2, job3, job4]
+    steps:
+      - name: print date bash4
+        run: date
