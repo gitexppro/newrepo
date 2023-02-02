@@ -21,7 +21,7 @@ jobs:
 
   job4:
     runs-on: ubuntu-20.04
-    needs: [job1, job2, job3, job4]
+    needs: [job1, job2, job3]
     steps:
       - name: print date bash4
         run: date
