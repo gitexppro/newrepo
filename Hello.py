@@ -1,1 +1,1 @@
-Print("testing script")
+print("testing script")
